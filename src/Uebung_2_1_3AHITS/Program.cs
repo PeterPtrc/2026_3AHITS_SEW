@@ -5,10 +5,14 @@ class Schulklasse
     int anzahlSchueler;
     string klassenvorstand;
 
-    public Schulklasse (int anzahlSchueler, string klassenvorstand)
+    public Schulklasse() : this(22, "Strasser")
+    {
+    }
+
+    public Schulklasse(int anzahlSchueler, string klassenvorstand)
     {
         this.anzahlSchueler = anzahlSchueler;
-        this.klassenvorstand  = klassenvorstand;
+        this.klassenvorstand = klassenvorstand;
     }
 
     public override string ToString()
@@ -21,7 +25,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Schulklasse ahits = new Schulklasse(22, "Strasser");
+        Schulklasse ahits = new Schulklasse();
         Console.WriteLine(ahits.ToString());
     }
 }
